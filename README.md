@@ -1,0 +1,1 @@
+Esta app la hice a las apuradas para compara ods archivos de tipo excel para mi trabajo es algo que se hace mensualmente y rewquiere mucho esfuerzo lo que la app ayuda un monton pero es simpole compara y da las diferencias entre los documentos segun lo que yo le indique por codigo
