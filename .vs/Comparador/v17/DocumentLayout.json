@@ -1,0 +1,70 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Apps\\Comparador\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{15A3951B-7BE1-4235-B0F7-F7F6D8B6C76F}|Comparador\\Comparador.csproj|d:\\apps\\comparador\\comparador\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{15A3951B-7BE1-4235-B0F7-F7F6D8B6C76F}|Comparador\\Comparador.csproj|solutionrelative:comparador\\pages\\index.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{15A3951B-7BE1-4235-B0F7-F7F6D8B6C76F}|Comparador\\Comparador.csproj|d:\\apps\\comparador\\comparador\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{15A3951B-7BE1-4235-B0F7-F7F6D8B6C76F}|Comparador\\Comparador.csproj|solutionrelative:comparador\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 5,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\Apps\\Comparador\\Comparador\\Pages\\Index.cshtml",
+              "RelativeDocumentMoniker": "Comparador\\Pages\\Index.cshtml",
+              "ToolTip": "D:\\Apps\\Comparador\\Comparador\\Pages\\Index.cshtml",
+              "RelativeToolTip": "Comparador\\Pages\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-15T02:29:51.036Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Index.cshtml.cs",
+              "DocumentMoniker": "D:\\Apps\\Comparador\\Comparador\\Pages\\Index.cshtml.cs",
+              "RelativeDocumentMoniker": "Comparador\\Pages\\Index.cshtml.cs",
+              "ToolTip": "D:\\Apps\\Comparador\\Comparador\\Pages\\Index.cshtml.cs",
+              "RelativeToolTip": "Comparador\\Pages\\Index.cshtml.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T01:05:27.101Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,164 @@
+﻿@page
+@model ComparadorUsusi2.Pages.IndexModel
+
+@using ComparadorUsusi2.Pages
+
+
+
+@{
+    ViewData["Title"] = "Comparador de Excel";
+}
+
+<div class="container">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2 class="text-center">@ViewData["Title"]</h2>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <!-- Formulario de carga de archivos -->
+            <form method="post" enctype="multipart/form-data" asp-page-handler="CompararArchivos">
+                <div class="row mb-3">
+                    <!-- Archivo 1 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Archivo 1 Lista DGAT</h5>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" name="file1" id="file1" accept=".xlsx,.xls" required>
+                                    <label class="input-group-text" for="file1">Cargar</label>
+                                </div>
+                                <div id="file1Name" class="form-text text-muted">
+                                    Ningún archivo seleccionado
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Archivo 2 -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Archivo 2- Lista TIC</h5>
+                                <div class="input-group">
+                                    <input type="file" class="form-control" name="file2" id="file2" accept=".xlsx,.xls" required>
+                                    <label class="input-group-text" for="file2">Cargar</label>
+                                </div>
+                                <div id="file2Name" class="form-text text-muted">
+                                    Ningún archivo seleccionado
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Botón Comparar -->
+                <div class="row mb-4">
+                    <div class="col-12 text-center">
+                        <button type="submit" class="btn btn-primary" id="btnComparar">
+                            <i class="fas fa-compare me-2"></i>Comparar
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Log de mensajes -->
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5 class="card-title mb-0">Log de Operaciones</h5>
+                </div>
+                <div class="card-body">
+                    <textarea id="txtLog" class="form-control" rows="8" readonly>@Model.LogMessages</textarea>
+                </div>
+            </div>
+
+            <!-- Tabla de Resultados -->
+            @if (Model.Resultados != null && Model.Resultados.Any())
+            {
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Resultados de la Comparación</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>Nivel</th>
+                                        <th>Cédula</th>
+                                        <th>Nombre</th>
+                                        <th>Estado</th>
+                                        <th>Observación</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var resultado in Model.Resultados)
+                                    {
+                                        <tr>
+                                            <td>@resultado.Nivel</td>
+                                            <td>@resultado.Cedula</td>
+                                            <td>@resultado.Nombre</td>
+                                            <td>
+                                                <span class="badge @(resultado.Estado == "Error" ? "bg-danger" : "bg-success")">
+                                                    @resultado.Estado
+                                                </span>
+                                            </td>
+                                            <td>@resultado.Observacion</td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<style>
+    #txtLog {
+        font-family: Consolas, monospace;
+        font-size: 0.9rem;
+        background-color: #f8f9fa;
+    }
+
+    .table {
+        font-size: 0.9rem;
+    }
+
+    .badge {
+        font-size: 0.8rem;
+        padding: 0.4em 0.6em;
+    }
+</style>
+@section Scripts {
+    <script>
+        // Actualizar nombre del archivo seleccionado
+        document.getElementById('file1').addEventListener('change', function () {
+            document.getElementById('file1Name').textContent = this.files[0]?.name || 'Ningún archivo seleccionado';
+        });
+
+        document.getElementById('file2').addEventListener('change', function () {
+            document.getElementById('file2Name').textContent = this.files[0]?.name || 'Ningún archivo seleccionado';
+        });
+
+        // Validación antes de enviar
+        document.querySelector('form').addEventListener('submit', function(e) {
+            const file1 = document.getElementById('file1').files[0];
+            const file2 = document.getElementById('file2').files[0];
+
+            if (!file1 || !file2) {
+                e.preventDefault();
+                alert('Por favor, seleccione ambos archivos antes de comparar.');
+                return false;
+            }
+        });
+    </script>
+}
+
+
+  
+
